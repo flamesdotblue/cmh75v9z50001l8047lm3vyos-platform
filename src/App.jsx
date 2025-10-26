@@ -1,28 +1,23 @@
-import { useState } from 'react'
+import Hero from './components/Hero';
+import Capabilities from './components/Capabilities';
+import Programs from './components/Programs';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen w-full bg-slate-950 text-slate-100 selection:bg-emerald-400/30 selection:text-emerald-200">
+      <Hero />
+      <Capabilities />
+      <Programs />
+      <Contact />
+      <footer className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 py-8 text-sm text-slate-400 flex flex-col sm:flex-row gap-2 sm:items-center justify-between">
+          <p>© {new Date().getFullYear()} Aegis Dynamics. All rights reserved.</p>
+          <p className="text-slate-500">ITAR Compliant • ISO 9001:2015 • CMMC Ready</p>
         </div>
-      </div>
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
